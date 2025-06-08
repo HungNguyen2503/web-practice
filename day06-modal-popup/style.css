@@ -27,7 +27,7 @@ body{
 
 .modal__wrap{
     width: 30rem;
-    margin: 25% auto;
+    margin: 10% auto;
 
 }
 
@@ -41,7 +41,6 @@ body{
     border-radius: 0.8rem 0.8rem 0 0;
     color: #fff;
 }
-
 
 .modal__header span{
     cursor: pointer;
