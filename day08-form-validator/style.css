@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+    --color-primary: #2691d9;
+    --color-secondary: #08609A;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(120deg, #3ca7ee, #9b408f);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    width: 400px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.container h2{
+    font-size: 32px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    color: var(--color-primary);
+}
+
+.container form{
+    padding: 0 40px;
+}
+
+.container .form-group{
+    margin: 40px 0;
+    position: relative;
+}
+.container .form-group input{
+    width: 100%;
+    padding: 8px 0;
+    outline: none;
+    border: none;
+    border-bottom: 3px solid #adadad;
+    font-size: 16px;
+    transition: all 1s ease;
+    font-family: "Poppins", sans-serif;
+}
+
+.container .form-group .highlight{
+    position: absolute;
+    top: calc(100% - 3px);
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: var(--color-primary);
+    transition: all 0.5s ease;
+}
+
+.container .form-group input:focus ~ .highlight{
+    width: 100%;
+}
+
+
+.container .form-group span{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    color: red;
+    font-size: 14px;
+}
+
+.container button{
+    width: 100%;
+    padding: 15px;
+    background-color: var(--color-primary);
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 600;
+    outline: none;
+    margin-top: 20px;
+    transition: background-color 0.55s ease;
+}
+.container button:hover{
+    background-color: var(--color-secondary);
+}
+
+.container .signup{
+    text-align: center;
+    margin: 25px 0;
+    color: #6f6f6f;
+}
+.container .signup a{
+    color: var(--color-primary);
+    text-decoration: none;
+    font-weight: 500;
+}
+.container .signup a:hover{
+    text-decoration: underline;
+}
