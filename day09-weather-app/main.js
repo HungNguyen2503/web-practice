@@ -23,7 +23,7 @@ async function getWeather(input) {
     }else{
         document.querySelector(".weather").style.backgroundImage = "url('images/cold.png')";
     }
-
+    
 	return data;
 }
 
