@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    <div class="weather">
+        <div class="weather__search">
+            <input type="text" name="search" id="search" placeholder="Search..." class="weather__input" autocomplete="off">
+        </div>
+        <div class="weather__location">
+            <h2 class="weather__city">
+                City, Country
+            </h2>
+            <p class="weather__datetime">dd:mm:yyyy</p>
+        </div>
+        <div class="weather_temp-box">
+            <span class="weather__temp">18 &deg;C</span>
+        </div>
+        <div class="weather__condition">
+            Rain
+        </div>
+        <div class="weather__details">
+            <div class="weather__detail">
+                <i class="weather__icon fas fa-eye"></i>
+                <span class="weather__vis">0(km)</span>
+            </div>
+            <div class="weather__detail">
+                <i class="weather__icon fas fa-wind"></i>
+                <span class="weather__wind">0 (km/h)</span>
+            </div>
+            <div class="weather__detail">
+                <i class="weather__icon fas fa-cloud-sun"></i>
+                <span class="weather__humidity">0 (%)</span>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="main.js"></script>
+</body>
+</html>
