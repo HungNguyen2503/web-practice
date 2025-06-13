@@ -1,3 +1,12 @@
+// import { fetchApi } from "./fetchAPI.js";
+// async function main() {
+//     const data = fetchApi("https://data-json-server-uxiu.onrender.com/api/todos");
+//     console.log(data);
+// }
+
+// main();
+
+
 document.querySelector(".entry").addEventListener('submit', function(e){
     e.preventDefault();
     const data = new FormData(this);
@@ -39,3 +48,27 @@ function deleteTodo(){
 function markCompletedTodo(){
     this.querySelector("p").classList.toggle("todos__item--completed");
 }
+
+/**
+ * move container positon
+ */
+let isDragging = false;
+let offsetX, offsetY;
+let container = document.querySelector(".container");
+
+
+container.addEventListener('mousedown', (e)=>{
+    isDragging = true;
+    offsetX = e.clientX - container.offsetLeft;
+    offsetY = e.clientY - container.offsetTop;
+});
+
+container.addEventListener('mousemove', (e)=>{
+    if(isDragging){
+        container.style.left = (e.clientX - offsetX) +`px`;
+        container.style.top = (e.clientY - offsetY) +`px`;
+    }
+})
+container.addEventListener('mouseup', ()=>{
+    isDragging = false;
+});
