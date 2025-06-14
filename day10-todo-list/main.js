@@ -1,10 +1,15 @@
-// import { fetchApi } from "./fetchAPI.js";
-// async function main() {
-//     const data = fetchApi("https://data-json-server-uxiu.onrender.com/api/todos");
-//     console.log(data);
-// }
+import { fetchApi } from "./fetchAPI.js";
+async function main() {
+    const data = await fetchApi("https://data-json-server-uxiu.onrender.com/api/todos");
+    data.forEach(d =>{
+        addTodo(d.todo);
+        if(d.completed){
+            console.log("Completed");
+        }
+    });
+}
 
-// main();
+main();
 
 
 document.querySelector(".entry").addEventListener('submit', function(e){
@@ -34,7 +39,7 @@ function addTodo(todo){
     clone.querySelector("i").addEventListener('click', deleteTodo);
         
     clone.querySelector(".todos__item").addEventListener('click', markCompletedTodo);
-    
+
     
     const htmlTodos = document.querySelector(".todos");
     htmlTodos.insertBefore(clone, htmlTodos.firstChild);
