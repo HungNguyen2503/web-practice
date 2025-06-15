@@ -60,15 +60,15 @@ body{
 .toast{
     display: flex;
     padding: 20px 30px;
-    margin-top: 10px;
     border-left: 6px solid #008000;
     background-color: #00800066;
     color: #fff;
+    margin-top: 10px;
     align-items: center;
     border-radius: 6px;
     overflow: hidden;
     position: relative;
-    animation: show_slide 1s linear forwards, hide_slide 1s linear forwards 4s;
+    animation: show_slide 1s linear forwards, hide_slide 1s linear forwards 4s, remove_slide 1s linear 5s forwards;
 }
 
 .toast i{
@@ -119,7 +119,7 @@ body{
 	}
 	100% {
 		transform: translateX(-10px);
-	}
+    }
 }
 
 @keyframes hide_slide {
@@ -131,9 +131,11 @@ body{
 	}
 	80% {
 		transform: translateX(-10%);
-	}
-	100% {
-		transform: translateX(120%);
-	}
+    }100%{
+        /* opacity: 0; */
+        transform: translateX(120%);
+    }
 }
+
+
 

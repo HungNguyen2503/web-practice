@@ -39,6 +39,8 @@ control.forEach(button => {
 
         htmlToasts.appendChild(toast);
 
+
+        // toast.addEventListener('animationend',()=> toast.remove());
         setTimeout(()=>{
             toast.remove();
         }, 5000);
