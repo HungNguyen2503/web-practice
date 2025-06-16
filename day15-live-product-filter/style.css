@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    background-color: #dadada;
+}
+
+.container{
+    width: 400px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 12px;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+h2{
+    margin: 20px 0;
+    font-size: 24px;
+}
+
+.form-input{
+    border: 1px solid #1e1e1e;
+    margin: 0 20px 20px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: pointer;
+}
+
+.form-input i{
+    font-size: 24px;
+}
+    
+.form-input input{
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    margin-left: 10px;
+}
+
+.product-list{
+    max-height: 400px;
+    overflow: auto;
+}
+
+.product-item{
+    display: flex;
+    padding: 10px 5px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: all 0.5s ease;
+
+}
+.product-item:hover{
+    background-color: #dadada;
+}
+
+.product-img{
+    width: 30%;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+.product-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    scale: 1.4;
+}
+
+.product-content{
+    width: 70%;
+    margin-left: 10px;
+    text-align: left;
+}
+
+.product-title{
+    font-size: 18px;
+    white-space: nowrap;        /* Không xuống dòng */
+    overflow: hidden;           /* Ẩn phần vượt ra ngoài */
+    text-overflow: ellipsis;    /* Thêm dấu "..." nếu bị cắt */
+}
+
+.product-price{
+    color: green;
+}

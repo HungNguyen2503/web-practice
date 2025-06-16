@@ -14,6 +14,7 @@ body{
     margin: 50px auto;
     overflow: hidden;
     box-shadow: 0 0 50px #2900f3;
+    border-radius: 8px;
 
 }
 .main{
@@ -43,15 +44,16 @@ body{
 }
 
 .list-img{
+    max-height: 15%;
     position: relative;
     display: flex;
     width: 100%;
-    padding: 0 -5px ;
 }
 
 .list-img div{
     width: calc(100% / 9);
     padding: 5px;
+    border-radius: 8px;
 }
 .list-img img{
     width: 100%;
@@ -59,6 +61,7 @@ body{
     height: 100%;
     object-position: center;
     cursor: pointer;
+    border-radius: 8px;
 }
 
 .border-select{
