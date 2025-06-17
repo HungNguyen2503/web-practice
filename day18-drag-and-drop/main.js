@@ -1,31 +1,29 @@
-
+const welcome = document.querySelector("#welcome");
 const boxs = document.querySelectorAll(".box");
 const img = document.querySelector(".box img");
-let isDragging = false;
-let offsetX, offsetY;
 
-function changeBox(){
-    boxs.forEach(box => {
-        box.addEventListener('mousemove', () => {
-            if(isDragging){
-                box.appendChild(img);
-            }
-        })
+img.addEventListener('dragstart', (e)=>{
+    e.dataTransfer.setData("text", e.target.id);
+});
+
+welcome.addEventListener('dragstart', (e)=>{
+    e.dataTransfer.setData("text", e.target.id);
+});
+
+
+boxs.forEach(box => {
+    box.addEventListener('dragover', (e)=>{
+        e.preventDefault();
     });
-}
-changeBox();
 
-img.addEventListener('mousedown', (e)=>{
-    console.log('down')
-    isDragging = true;
+    box.addEventListener('drop', (e)=>{
+        e.preventDefault();
+        const data = e.dataTransfer.getData("text");
+        
+        if(document.getElementById(data).tagName == 'IMG')
+            box.appendChild(document.getElementById(data));
+    });
 });
 
-img.addEventListener('mousemove', (e)=>{
 
-});
-
-document.addEventListener('mouseup', ()=>{
-    console.log('up')
-    isDragging = false;
-});
 

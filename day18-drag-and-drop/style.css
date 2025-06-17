@@ -18,11 +18,19 @@ body{
     display: flex;
 }
 
+h1{
+    text-align: center;
+    color: aliceblue;
+}
+
 .box{
     flex: 1;
     border: 10px solid #838383;
     margin: 0 10px;
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .box img{
@@ -31,8 +39,10 @@ body{
     left: 0;
     width: 100%;
     height: 100%;
+    /* -webkit-user-select: none;
+    user-select: none; */
 }
 
-.select{
+.box img:hover{
     cursor: grab;
 }
