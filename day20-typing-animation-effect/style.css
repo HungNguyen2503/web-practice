@@ -1,0 +1,49 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #060802;
+}
+
+.container{
+
+}
+
+.container p{
+    background-color: #96EE1C33;
+    color: #96EE1C;
+    font-size: 70px;
+    padding: 10px 0;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: inherit;
+    white-space: nowrap;
+    margin: 0;
+    font-weight: 900;
+    letter-spacing: 3px;
+    font-family: monospace;
+    animation: typing 10s steps(30) infinite, blink 1s infinite;
+}
+
+@keyframes typing {
+    0%{
+        width: 0%;
+    }
+    70%, 90%{
+        width: 100%;
+    }
+    100%{
+        width: 0%;
+    }
+}
+
+@keyframes blink {
+    0%,
+	100% {
+		border-right: 8px solid transparent;
+	}
+	50% {
+		border-right: 8px solid #96EE1C;
+	}
+}
