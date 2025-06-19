@@ -1,27 +1,23 @@
 body{
     display: flex;
     justify-content: center;
-    align-items: center;
     height: 100vh;
     background-color: #060802;
 }
 
 .container{
-
+    margin: 200px auto;
 }
 
 .container p{
     background-color: #96EE1C33;
     color: #96EE1C;
     font-size: 70px;
-    padding: 10px 0;
     width: 100%;
     overflow: hidden;
     text-overflow: inherit;
     white-space: nowrap;
-    margin: 0;
     font-weight: 900;
-    letter-spacing: 3px;
     font-family: monospace;
     animation: typing 10s steps(30) infinite, blink 1s infinite;
 }
