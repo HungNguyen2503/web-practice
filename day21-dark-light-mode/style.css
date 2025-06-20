@@ -1,0 +1,115 @@
+:root{
+    --color-bg: #EEEEEE;
+    --color-primary: #0A6CF1;
+    --color-box: #dadada;
+    --color-text: #333;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
+
+body{
+    background-color: var(--color-bg);
+    transition: 1s;
+}
+
+body.dark{
+    --color-bg: #2d2c2d;
+    --color-primary: #4daf54;
+    --color-box: #3b3a3b;
+    --color-text: #fff;
+
+    background-color: var(--color-bg);
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+}
+
+.header__text{
+    color: var(--color-primary);
+    font-size: 32px;
+}
+
+.header__mode label{
+    display: block;
+    width: 60px;
+    height: 30px;
+    cursor: pointer;
+    position: relative;
+    background-color: #aaa;
+    border-radius: 20px;
+    position: relative;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.header__mode label::after{
+    content: '';
+    height: 70%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translate(20% , -50%);
+    transition: all 0.3s linear;
+}
+
+.header__mode input:checked + label{
+    background-color: var(--color-primary);
+}
+.header__mode input:checked + label::after{
+    top: 50%;
+    left: 100%;
+    transform: translate(-120% , -50%);
+}
+
+.main{
+    text-align: center;
+    margin: 5%;
+    font-size: 18px;
+}
+
+.main__title{
+    color: var(--color-primary);
+    font-size: 48px;
+    margin-bottom: 50px;
+}
+
+.main__content{
+    background-color: var(--color-box);
+    padding: 30px 50px;
+    border-radius: 10px;
+    text-align: justify;
+    color: var(--color-text);
+}
+
+.main__social{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 50px;
+}
+
+.main__box{
+    background-color: var(--color-primary);
+    padding: 10px 30px;
+    border-radius: 10px;
+    color: #fff;
+}
+
+a {
+	text-decoration: none;
+	padding: 10px 20px;
+	background-color: var(--color-primary);
+	color: #dadada;
+	border-radius: 10px;
+}
