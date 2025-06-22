@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer video play</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="player">
+        <video class="player__video" src="https://res.cloudinary.com/dz1jl8z32/video/upload/v1750576289/%E5%91%A8%E6%9E%97%E6%9E%AB_-_%E5%88%AB%E8%AE%A9%E7%88%B1%E5%87%8B%E8%90%BD_My_Love_%C4%90%E1%BB%ABng_%C4%90%E1%BB%83_T%C3%ACnh_Y%C3%AAu_Phai_T%C3%A0n_-_Chu_L%C3%A2m_Phong_-_Hot_Douyin_1_klowg1.mp4">
+        </video>
+        <div class="player__control">
+            <div class="player__play">
+                <i class="fa-solid fa-play"></i>
+            </div>
+            <div class="player__time">
+                <div class="player__currentTime">
+                    00:00:00
+                </div>/
+                <div class="player__duration">
+                    00:00:00
+                </div>
+            </div>
+            <div class="player__progress">
+                <div class="player__completed"></div>
+            </div>
+            <div class="player__prev"><i class="fa-solid fa-backward"></i>5s</div>|
+            <div class="player__next">5s<i class="fa-solid fa-forward"></i></div>
+            <div class="player__volume">
+                <i class="fa-solid fa-volume-xmark"></i>
+                <input type="range" min="0" max="100" step="1" value="40" title="volume">
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
