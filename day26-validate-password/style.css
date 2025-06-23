@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: linear-gradient(145deg, #569377 50%, #dbede5 50%);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.validate{
+    margin-top: 100px;
+}
+
+.validate__form{
+    display: flex;
+    gap: 10px;
+}
+
+.validate__input{
+    display: flex;
+    width: 300px;
+    align-items: center;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+}
+.validate__input input{
+    border: none;
+    outline: none;
+    padding: 5px 10px;
+    font-size: 20px;
+}
+.validate__input i{
+    cursor: pointer;
+}
+
+.validate__submit{
+    padding: 0 30px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+    background-color: #48735F;
+    cursor: pointer;
+}
+
+.validate__requirement{
+    background-color: #48735F;
+    margin-top: 30px;
+    list-style-type: none;
+    padding: 20px 10px;
+    color: #fff;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+.validate__requirement li{
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.validate__icon::before{
+    content: '\f00d';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    font-size: 28px;
+    margin-right: 20px;
+}
+
+.validate--completed{
+    color: #A4AE90;
+}
+.validate--completed .validate__icon::before{
+    content: '\f00c';
+    color: #fff;
+}
