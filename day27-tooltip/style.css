@@ -1,0 +1,143 @@
+/* === BIẾN MÀU SẮC THƯƠNG HIỆU === */
+:root {
+  /** Facebook: Màu xanh dương hiện đại và đặc trưng */
+  --color-facebook: #1877F2;
+
+  /** GitHub: Màu đen chủ đạo của logo và thanh điều hướng */
+  --color-github: #000000;
+
+  /** Giữ lại màu xanh của Twitter cũ để tham khảo nếu cần */
+  --color-twitter: #1DA1F2;
+
+  /** Instagram: Logo là một dải gradient. Đây là màu hồng/đỏ nổi bật nhất trong dải màu đó. */
+  --color-instagram: #E1306C;
+
+  /** YouTube: Màu đỏ tươi, biểu tượng của thương hiệu */
+  --color-youtube: #FF0000;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(100deg, #e44b4b 5%, #1370df 85%);
+}
+
+.socials{
+    height: max-content;
+    display: flex;
+    gap: 80px;
+    list-style-type: none;
+}
+
+.socials__item{
+    width: 80px;
+    aspect-ratio: 1/1;
+    padding: 15px;
+    border-radius: 50%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.25s ease;
+}
+
+.socials__item a{
+    font-size: 36px;
+    color: #000;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.25s ease;
+}
+
+.socials__item:hover a{
+    color: #fff;
+}
+
+.socials__item:hover .tooltip{
+    visibility: visible;
+    transform: translateY(-150%);
+    opacity: 1;
+}
+
+.socials__item .tooltip{
+    position: absolute;
+    color: #fff;
+    font-size: 36px;
+    opacity: 0;
+    z-index: 0;
+    border-radius: 45px;
+    padding: 5px 20px;
+    transform: translateY(0%);
+    text-align: center;
+    transition: all 0.25s ease;
+    visibility: hidden;
+}
+
+.socials__item .tooltip::before{
+    position: absolute;
+	content: '';
+	height: 15px;
+	width: 15px;
+	left: 50%;
+	bottom: -6px;
+	transform: translateX(-50%) rotate(45deg);
+    transition: all 0.25s ease;
+}
+
+/*Facebook*/
+.facebook:hover,
+.facebook:hover .tooltip-facebook,
+.facebook:hover .tooltip-facebook::before{
+    background-color: var(--color-facebook);
+}
+/*Facebook end*/
+
+/*Github*/
+.github:hover,
+.github:hover .tooltip-github,
+.github:hover .tooltip-github::before{
+    background-color: var(--color-github);
+}
+/*Github end*/
+
+
+/*Twitter*/
+.twitter:hover,
+.twitter:hover .tooltip-twitter,
+.twitter:hover .tooltip-twitter::before{
+    background-color: var(--color-twitter);
+}
+/*Twitter end*/
+
+/*Instagram*/
+.instagram:hover,
+.instagram:hover .tooltip-instagram,
+.instagram:hover .tooltip-instagram::before{
+    background-color: var(--color-instagram);
+}
+/*Instagram end*/
+
+/*Youtube*/
+.youtube:hover,
+.youtube:hover .tooltip-youtube,
+.youtube:hover .tooltip-youtube::before{
+    background-color: var(--color-youtube);
+}
+/*Youtube end*/
+
+
+
+
+
+
