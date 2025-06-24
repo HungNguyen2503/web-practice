@@ -1,0 +1,32 @@
+const wrapper = document.querySelector('.wrapper');
+
+let isMouseDown = false;
+let startX, scrollLeft;
+
+wrapper.addEventListener('mousedown', (e) => {
+	isMouseDown = true;
+	startX = e.pageX - wrapper.offsetLeft;
+	scrollLeft = wrapper.scrollLeft;
+
+})
+
+wrapper.addEventListener('mouseleave', () => {
+	isMouseDown = false
+});
+
+wrapper.addEventListener('mouseup', () => {
+	isMouseDown = false
+});
+
+wrapper.addEventListener('mousemove', (e) => {
+	if (!isMouseDown) return;
+
+	const x = e.pageX - wrapper.offsetLeft;
+    
+	// 1.5 là tốc độ scroll
+    
+    console.log(x, startX);
+	const walk = (x - startX) * 1.5;
+	wrapper.scrollLeft = scrollLeft - walk;
+    
+});
