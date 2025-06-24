@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Pacifico&family=Parisienne&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: linear-gradient(135deg, #F5F5DC, #DE92A3);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #D5006D;
+    font-family: "Parisienne", cursive;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: 1px;
+}
+
+.wrapper{
+    display: flex;
+    width: 800px;
+    aspect-ratio: 7/3;
+    background-color: #EFCCD4;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.wrapper__img{
+    flex: 0 0 30%;
+    height: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.wrapper__img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 20px;
+}
+
+.wrapper__content{
+    flex: 0 0 70%;
+    overflow: hidden;
+    padding: 0 10px 0 30px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;    
+}
+
+.wrapper__title{
+    height: 40px;
+    font-size: 32px;
+    margin-bottom: 20px;
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.wrapper__desc{
+    height: 120px;
+    font-size: 20px;
+    text-align: justify;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.wrapper__action{
+    width: 40%;
+    height: 40px;
+    border: none;
+    outline: none;
+    color: #EFCCD4;
+    background-color: #D5006D;
+    font-size: 20px;
+    font-weight: 700;
+    border-radius: 10px;
+    transition: all .3s ease;
+    margin-top: auto;
+    font-family: "Parisienne", cursive;
+    font-weight: 900;
+    letter-spacing: 5px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.wrapper__action:hover{
+    transform: scale(0.9);
+    transform: translateY(-10px);
+}
+
+.loading{
+    background-color: #FFB6C1;
+    transform: none;
+    position: relative;
+    border-radius: 10px;
+}
+
+.loading::before{
+    width: 0;
+    height: 100%;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #FAC7CF;
+    animation: load 1s linear infinite;
+}
+
+@keyframes load {
+    0%,100%{
+        width: 0%;
+    }
+    60%{
+        width: 100%;
+    }
+}
